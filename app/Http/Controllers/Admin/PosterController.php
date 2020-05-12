@@ -32,7 +32,7 @@ class PosterController extends Controller
 		$matrixPointSize = 3;  
 		//¶þÎ¬ÂëÍ¼Æ¬Ãû³Æ
 		$qrcode_name = 'qrcode.png';
-        //Éú³É¶þÎ¬ÂëÍ¼Æ¬ 
+		//Éú³É¶þÎ¬ÂëÍ¼Æ¬ 
 		$img->png($qrcode_text, $qrcode_name, $errorCorrectionLevel, $matrixPointSize);
 		$backgroundInfo = getimagesize($post_url);
 		$backgroundFun = 'imagecreatefrom'.image_type_to_extension($backgroundInfo[2], false);
