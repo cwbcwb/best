@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::get("Admin/Test/test1","Admin\TestController@test1");//需这样填写
 Route::get("Home/index/index","Home\IndexController@index1");
+Route::get("Admin/poster/getPoster","Admin\PosterController@getPoster");
 Route::group(['prefix'=>'Admin'],function(){
 	Route::get("Test/test2",'Admin\TestController@test2');
 	Route::get("Test/test3",'Admin\TestController@test3');
