@@ -25,15 +25,15 @@ class PosterController extends Controller
 		$qrcode_text = $request->get('qrcode_text');
 		$qrcode_x = $request->get('qrcode_x');
 		$qrcode_y = $request->get('qrcode_y');
-        $img = new \QRcode();
+		$img = new \QRcode();
 		//容错级别 
-        $errorCorrectionLevel = 'L';
+		$errorCorrectionLevel = 'L';
 		// 生成图片大小
-        $matrixPointSize = 3;  
+		$matrixPointSize = 3;  
 		//二维码图片名称
 		$qrcode_name = 'qrcode.png';
         //生成二维码图片 
-        $img->png($qrcode_text, $qrcode_name, $errorCorrectionLevel, $matrixPointSize);
+		$img->png($qrcode_text, $qrcode_name, $errorCorrectionLevel, $matrixPointSize);
 		$backgroundInfo = getimagesize($post_url);
 		$backgroundFun = 'imagecreatefrom'.image_type_to_extension($backgroundInfo[2], false);
 		$background = $backgroundFun($post_url);
